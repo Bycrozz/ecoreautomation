@@ -22,24 +22,24 @@ Requirements: Have the [latest version](https://www.python.org/downloads/) of Py
         git clone https://github.com/Bycrozz/ecoreautomation.git
 2. Navigate with the terminal to the cloned git folder and install the dependencies:
 
-        pip install -r requirements.txt
+        python -m pip install -r requirements.txt
 3. Run the tests using the pytest command will automatically run all the tests
 
-        pytest
+        python -m pytest
 
     3.1 - To run a specific test class use the following command (example with login):
 
-        pytest src/test/tests/login_test.py
+        python -m pytest src/test/tests/login_test.py
 
     3.2 - This project supports multithreading (parallel testing) and headless. To run a test class with multiple threads and headless use the command below:
 
-         pytest src/test/tests/login_test.py -n 5 --headless
+         python -m pytest src/test/tests/login_test.py -n 5 --headless
    where "-n 5" means 5 threads will be used, so to run with more or less threads change this parameter.
                      
-   3.3 - It's possible to run a specific test scenario instead of the test class. Each scenario is marked with `@pytest.mark.TAGNAME`
+   3.3 - It's possible to run a specific test scenario instead of the test class. Each scenario is marked with `@pytest.mark.TAGNAME` (this can be combined with parallel running and headless)
 
-         pytest -m TAGNAME
-4. After running the tests the results are shown in the terminal, but a HTML report is generated in folder reports/html_report/report.html
+         python -m pytest -m TAGNAME
+4. After running the tests the results are shown in the terminal, but a HTML report is generated in folder `ecoreautomation/reports/html_report/report.html`
 ---
 ###  Test cases and expected results:
 
